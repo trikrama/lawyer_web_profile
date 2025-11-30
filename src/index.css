@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium Law Firm Color System - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Deep charcoal as primary */
+    --primary: 0 0% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Elegant gold accent */
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 10%;
+
+    /* Light gray secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.5rem;
+    
+    /* Custom premium tokens */
+    --gold: 43 74% 49%;
+    --gold-light: 43 74% 60%;
+    --gold-dark: 43 74% 35%;
+    --charcoal: 0 0% 15%;
+    --charcoal-light: 0 0% 25%;
+    --smoke: 0 0% 96%;
+    --smoke-dark: 0 0% 92%;
+    
+    /* Premium gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 60%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 15%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Elegant shadows */
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.04);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.12);
+    --shadow-gold: 0 4px 24px hsl(43 74% 49% / 0.15);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Premium Law Firm Color System - Dark Mode */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 10%;
+
+    /* Gold accent stays vibrant in dark mode */
+    --accent: 43 74% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 43 74% 55%;
+    
+    /* Dark mode custom tokens */
+    --gold: 43 74% 55%;
+    --gold-light: 43 74% 65%;
+    --gold-dark: 43 74% 40%;
+    --charcoal: 0 0% 15%;
+    --charcoal-light: 0 0% 20%;
+    --smoke: 0 0% 12%;
+    --smoke-dark: 0 0% 10%;
+    
+    /* Dark gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 55%) 0%, hsl(43 74% 65%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 12%) 100%);
+    
+    /* Darker shadows */
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 4px 24px hsl(43 74% 55% / 0.25);
+    
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 74% 55%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 43 74% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Premium typography system */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Selection color */
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+/* Premium animation utilities */
+@layer utilities {
+  /* Fade animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+  
+  /* Stagger delays for sequential animations */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  
+  /* Hover scale effect */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Gold gradient text */
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Underline animation */
+  .underline-animate {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline-animate::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: hsl(var(--accent));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+  
+  .underline-animate:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+/* Keyframe definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
