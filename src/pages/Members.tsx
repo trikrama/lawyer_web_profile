@@ -9,53 +9,37 @@ const Members = () => {
   // Team members data - Managing Partner & Senior Lawyers
   const teamMembers = [
     {
-      name: 'Dr. Raden Achmad Santoso, S.H., M.H.',
+      name: 'Rizaldy Alif Syahrial',
       position: 'Managing Partner',
-      specialization: 'Corporate Law, M&A, Compliance',
+      specialization: 'Senior Lawyer specializing in Economic Law, Investment Law, and Natural Resources Law',
       description: 'Over 20 years of experience in corporate law and cross-border transactions. Led landmark M&A deals and advised Fortune 500 companies on complex regulatory matters.',
       email: 'raden.santoso@raslawfirm.co.id',
       linkedin: '#',
     },
     {
-      name: 'Maria Angelina, S.H., LL.M.',
-      position: 'Senior Partner',
-      specialization: 'Litigation & Dispute Resolution',
+      name: 'I Gede Yasa C.A',
+      position: 'Senior Lawyer Corporate',
+      specialization: 'Senior Lawyer Corporate, Banking and Commercial Litigation',
       description: 'Renowned litigator with expertise in commercial disputes, arbitration, and white-collar crime. Successfully represented clients in high-profile cases before Indonesian courts.',
       email: 'maria.angelina@raslawfirm.co.id',
       linkedin: '#',
     },
     {
-      name: 'Budi Hartono, S.H., M.Kn.',
-      position: 'Senior Partner',
-      specialization: 'Employment Law & Industrial Relations',
+      name: 'Muhamad Ilmar R',
+      position: 'Senior Lawyer Criminal Defense',
+      specialization: 'Senior Lawyer Criminal Defense, Public Governance and Compliance',
       description: 'Expert in labor law, employment contracts, and industrial relations disputes. Advised multinational corporations on workforce restructuring and compliance.',
       email: 'budi.hartono@raslawfirm.co.id',
       linkedin: '#',
     },
     {
-      name: 'Siti Nurhaliza, S.H., LL.M.',
-      position: 'Partner',
-      specialization: 'Intellectual Property & Technology Law',
+      name: 'Dalili',
+      position: 'Senior Lawyer Criminal Law',
+      specialization: 'Senior Lawyer Criminal Law, Mediation and Dispute Resolution',
       description: 'Specializes in IP protection, licensing, and technology transactions. Extensive experience in trademark disputes and patent portfolio management.',
       email: 'siti.nurhaliza@raslawfirm.co.id',
       linkedin: '#',
-    },
-    {
-      name: 'Agus Setiawan, S.H., M.H.',
-      position: 'Partner',
-      specialization: 'Real Estate & Infrastructure',
-      description: 'Focuses on property law, construction contracts, and infrastructure projects. Advised on major real estate developments and PPP arrangements.',
-      email: 'agus.setiawan@raslawfirm.co.id',
-      linkedin: '#',
-    },
-    {
-      name: 'Linda Wijaya, S.H., LL.M.',
-      position: 'Associate Partner',
-      specialization: 'Banking & Finance',
-      description: 'Expert in banking regulations, project finance, and capital markets. Advised financial institutions on regulatory compliance and structured finance transactions.',
-      email: 'linda.wijaya@raslawfirm.co.id',
-      linkedin: '#',
-    },
+    }
   ];
 
   return (
@@ -78,7 +62,7 @@ const Members = () => {
       {/* Team Grid Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card
                 key={index}
@@ -104,14 +88,14 @@ const Members = () => {
                   <p className="text-sm font-semibold text-accent">
                     {member.position}
                   </p>
-                  <CardDescription className="text-xs text-muted-foreground">
+                  {/* <CardDescription className="text-xs text-muted-foreground">
                     {member.specialization}
-                  </CardDescription>
+                  </CardDescription> */}
                 </CardHeader>
 
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {member.description}
+                    {member.specialization}
                   </p>
 
                   {/* Contact & Social Links */}
@@ -141,7 +125,7 @@ const Members = () => {
       </section>
 
       {/* Join Our Team CTA */}
-      <section className="py-20 bg-secondary/30">
+      {/* <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-serif font-bold text-foreground">
@@ -160,7 +144,7 @@ const Members = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

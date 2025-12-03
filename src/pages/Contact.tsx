@@ -21,37 +21,28 @@ const Contact = () => {
       icon: MapPin,
       title: t('contact.office'),
       details: [
-        'Menara RAS, 15th Floor',
-        'Jl. Jend. Sudirman Kav. 52-53',
-        'Jakarta Selatan 12190',
-        'Indonesia',
+        'Jl. Salemba Tengah No.56',
+        'Jakarta Pusat, 10440',
+        'Indonesia'
       ],
     },
     {
       icon: Phone,
       title: 'Phone',
       details: [
-        '+62 21 5790 0888',
-        'Fax: +62 21 5790 0999',
+        '+62 821 8889 9349',
+        '+62 857 5613 7071'
       ],
     },
     {
       icon: Mail,
       title: 'Email',
       details: [
-        'info@raslawfirm.co.id',
-        'partners@raslawfirm.co.id',
+        'raslawfirm09@gmail.com',
+        'contact@raslawfirm.id',
       ],
     },
-    {
-      icon: Clock,
-      title: 'Office Hours',
-      details: [
-        'Monday - Friday: 9:00 AM - 6:00 PM',
-        'Saturday: 9:00 AM - 1:00 PM',
-        'Sunday: Closed',
-      ],
-    },
+   
   ];
 
   return (
@@ -74,9 +65,10 @@ const Contact = () => {
       {/* Contact Form & Info Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"> */}
+          <div className="max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="border-border bg-card">
+            {/* <Card className="border-border bg-card">
               <CardHeader>
                 <CardTitle className="text-2xl font-serif">
                   Send Us a Message
@@ -136,10 +128,10 @@ const Contact = () => {
                   </Button>
                 </form>
               </CardContent>
-            </Card>
+            </Card> */}
 
             {/* Contact Information */}
-            <div className="space-y-6">
+            <div className="grid lg:grid-cols-2 gap-3 ">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (

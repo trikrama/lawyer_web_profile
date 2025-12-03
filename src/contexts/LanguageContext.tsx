@@ -24,6 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Kontak',
     
     // Hero Section
+    'hero.title': 'RAS LAW FIRM',
     'hero.tagline': 'Prosperity Through Law, Driven by Integrity',
     'hero.subtitle': 'Firma hukum terkemuka di Jakarta dengan keahlian lintas sektor, pendekatan riset mendalam, dan komitmen terhadap integritas.',
     'hero.cta.primary': 'Konsultasi Sekarang',
@@ -100,6 +101,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero Section
+    'hero.title': 'RAS LAW FIRM',
     'hero.tagline': 'Prosperity Through Law, Driven by Integrity',
     'hero.subtitle': 'Leading law firm in Jakarta with multi-sector expertise, research-driven approach, and unwavering commitment to integrity.',
     'hero.cta.primary': 'Get Consultation',

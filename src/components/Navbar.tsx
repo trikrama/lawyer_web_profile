@@ -26,8 +26,8 @@ const Navbar = () => {
     { to: '/about', label: t('nav.about') },
     { to: '/members', label: t('nav.members') },
     { to: '/services', label: t('nav.services') },
-    { to: '/news', label: t('nav.news') },
-    { to: '/careers', label: t('nav.careers') },
+    // { to: '/news', label: t('nav.news') },
+    // { to: '/careers', label: t('nav.careers') },
     { to: '/contact', label: t('nav.contact') },
   ];
 
@@ -116,7 +116,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-6 border-t border-border pt-6 animate-fade-in-down">
+          <div className="lg:hidden mt-6 pb-6 border-t border-border pt-6 animate-fade-in-down bg-charcoal px-3 rounded-md">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <NavLink

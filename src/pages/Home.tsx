@@ -63,10 +63,16 @@ const Home = () => {
     },
   ];
 
+  console.log(t('hero.title'))
+
   return (
     <div className="min-h-screen">
       {/* Hero Section: Full-screen dengan gradient background */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark overflow-hidden">
+
+      {/* <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark overflow-hidden"> */}
+
+      <section className="relative min-h-screen flex items-center justify-center bg-center bg-[url(/assets/bg-hero.png)] overflow-hidden">
+        <div className="absolute inset-0 bg-black/80 z-0"></div>
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
@@ -76,16 +82,20 @@ const Home = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             {/* Main Tagline */}
+            
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
-              <span className="block">{t('hero.tagline').split(',')[0]},</span>
-              <span className="block text-gradient-gold">
+              <span className="block">{t('hero.title')}</span>    
+              {/* <span className="block text-2xl md:text-3xl lg:text-4xl">{t('hero.tagline').split(',')[0]},</span>
+              <span className="block text-gradient-gold text-2xl md:text-3xl lg:text-4xl">
                 {t('hero.tagline').split(',')[1]}
-              </span>
+              </span> */}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              {t('hero.subtitle')}
+            <p className="text-lg md:text-xl font-bold text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <span className=''>{t('hero.tagline').split(',')[0]},</span>
+              <span className='text-gradient-gold'>{t('hero.tagline').split(',')[1]}</span>
+
             </p>
 
             {/* CTAs */}
