@@ -1,48 +1,41 @@
 // Contact Page: Form kontak, map, informasi kontak lengkap
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import { toast } from 'sonner';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
   const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success('Thank you for your message! We will get back to you soon.');
+    toast.success("Thank you for your message! We will get back to you soon.");
   };
 
   const contactInfo = [
     {
       icon: MapPin,
-      title: t('contact.office'),
+      title: t("contact.office"),
       details: [
-        'Jl. Salemba Tengah No.56',
-        'Jakarta Pusat, 10440',
-        'Indonesia'
+        "Jl. Salemba Tengah No.56",
+        "Jakarta Pusat, 10440",
+        "Indonesia",
       ],
     },
     {
       icon: Phone,
-      title: 'Phone',
-      details: [
-        '+62 821 8889 9349',
-        '+62 857 5613 7071'
-      ],
+      title: "Phone",
+      details: ["+62 821 8889 9349", "+62 857 5613 7071", "WhatsApp"],
     },
     {
       icon: Mail,
-      title: 'Email',
-      details: [
-        'raslawfirm09@gmail.com',
-        'contact@raslawfirm.id',
-      ],
+      title: "Email",
+      details: ["raslawfirm09@gmail.com", "contact@raslawfirm.id"],
     },
-   
   ];
 
   return (
@@ -52,11 +45,11 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-foreground">
-              {t('contact.title')}
+              {t("contact.title")}
             </h1>
             <div className="w-20 h-1 bg-gradient-gold mx-auto" />
             <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('contact.subtitle')}
+              {t("contact.subtitle")}
             </p>
           </div>
         </div>
@@ -147,7 +140,10 @@ const Contact = () => {
                           </h3>
                           <div className="space-y-1">
                             {info.details.map((detail, idx) => (
-                              <p key={idx} className="text-sm text-muted-foreground">
+                              <p
+                                key={idx}
+                                className="text-sm text-muted-foreground"
+                              >
                                 {detail}
                               </p>
                             ))}
@@ -178,13 +174,21 @@ const Contact = () => {
             <div className="aspect-video bg-muted rounded-xl overflow-hidden shadow-lg">
               <div className="w-full h-full flex items-center justify-center bg-gradient-dark">
                 <div className="text-center space-y-4">
-                  <MapPin className="w-16 h-16 text-accent mx-auto" />
-                  <p className="text-xl font-serif text-primary-foreground">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.90831405884012!2d106.85456563421259!3d-6.1931755533835195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f45cdfb4169f%3A0xc82ef49e226d4e00!2sJl.%20Salemba%20Tengah%20No.56%2C%20RT.4%2FRW.8%2C%20Paseban%2C%20Kec.%20Senen%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2010440!5e0!3m2!1sen!2sid!4v1764824765839!5m2!1sen!2sid"
+                    className="w-[1100px] h-[550px] rounded-md"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                  {/* <MapPin className="w-16 h-16 text-accent mx-auto" /> */}
+                  {/* <p className="text-xl font-serif text-primary-foreground">
                     Menara RAS, Jakarta Selatan
                   </p>
                   <p className="text-sm text-primary-foreground/70">
                     Map integration coming soon
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>

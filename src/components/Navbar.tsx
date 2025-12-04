@@ -1,10 +1,10 @@
 // Navbar Component: Premium navigation dengan dark mode & language toggle
-import { useState, useEffect } from 'react';
-import { NavLink } from '@/components/NavLink';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTheme } from '@/contexts/ThemeContext';
-import { Button } from '@/components/ui/button';
-import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { NavLink } from "@/components/NavLink";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTheme } from "@/contexts/ThemeContext";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun, Menu, X, Globe } from "lucide-react";
 
 const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -17,26 +17,26 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { to: '/', label: t('nav.home') },
-    { to: '/about', label: t('nav.about') },
-    { to: '/members', label: t('nav.members') },
-    { to: '/services', label: t('nav.services') },
-    // { to: '/news', label: t('nav.news') },
-    // { to: '/careers', label: t('nav.careers') },
-    { to: '/contact', label: t('nav.contact') },
+    { to: "/", label: t("nav.home") },
+    { to: "/about", label: t("nav.about") },
+    { to: "/members", label: t("nav.members") },
+    { to: "/services", label: t("nav.services") },
+    { to: "/news", label: t("nav.news") },
+    { to: "/careers", label: t("nav.careers") },
+    { to: "/contact", label: t("nav.contact") },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-md border-b border-border'
-          : 'bg-transparent'
+          ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -75,11 +75,13 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
+              onClick={() => setLanguage(language === "id" ? "en" : "id")}
               className="hidden md:flex items-center space-x-2"
             >
               <Globe className="w-4 h-4" />
-              <span className="text-xs font-semibold uppercase">{language}</span>
+              <span className="text-xs font-semibold uppercase">
+                {language}
+              </span>
             </Button>
 
             {/* Theme Toggle */}
@@ -90,7 +92,7 @@ const Navbar = () => {
               className="rounded-full"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? (
+              {theme === "light" ? (
                 <Moon className="w-5 h-5" />
               ) : (
                 <Sun className="w-5 h-5" />
@@ -134,14 +136,16 @@ const Navbar = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => {
-                  setLanguage(language === 'id' ? 'en' : 'id');
+                  setLanguage(language === "id" ? "en" : "id");
                   setIsMobileMenuOpen(false);
                 }}
                 className="flex items-center justify-start space-x-2 w-full"
               >
                 <Globe className="w-4 h-4" />
                 <span className="text-sm">
-                  {language === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
+                  {language === "id"
+                    ? "Switch to English"
+                    : "Ganti ke Bahasa Indonesia"}
                 </span>
               </Button>
             </div>
