@@ -85,7 +85,7 @@ const Navbar = () => {
             </Button>
 
             {/* Theme Toggle */}
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
@@ -97,7 +97,7 @@ const Navbar = () => {
               ) : (
                 <Sun className="w-5 h-5" />
               )}
-            </Button>
+            </Button> */}
 
             {/* Mobile Menu Toggle */}
             <Button
