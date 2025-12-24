@@ -11,10 +11,10 @@ import { toast } from "sonner";
 const Contact = () => {
   const { t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast.success("Thank you for your message! We will get back to you soon.");
-  };
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   toast.success("Thank you for your message! We will get back to you soon.");
+  // };
 
   const contactInfo = [
     {
@@ -60,68 +60,6 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"> */}
           <div className="max-w-6xl mx-auto">
-            {/* Contact Form */}
-            {/* <Card className="border-border bg-card">
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif">
-                  Send Us a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">{t('contact.form.name')}</Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="John Doe"
-                      required
-                      className="border-border"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">{t('contact.form.email')}</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      required
-                      className="border-border"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">{t('contact.form.phone')}</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+62 812 3456 7890"
-                      className="border-border"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">{t('contact.form.message')}</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your legal needs..."
-                      rows={6}
-                      required
-                      className="border-border resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                  >
-                    {t('contact.form.submit')}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card> */}
 
             {/* Contact Information */}
             <div className="grid lg:grid-cols-2 gap-3 ">

@@ -147,7 +147,7 @@ const News = () => {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-20 bg-secondary/30">
+      {/* <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-serif font-bold text-foreground">
@@ -172,7 +172,7 @@ const News = () => {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
