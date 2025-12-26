@@ -76,7 +76,7 @@ const Home = () => {
 
       {/* <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark overflow-hidden"> */}
 
-      <section className="relative min-h-screen flex items-center justify-center bg-center bg-[url(/assets/bg-hero.png)] overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-center bg-[url(/assets/images/bg-hero.png)] overflow-hidden">
         <div className="absolute inset-0 bg-black/70 z-0"></div>
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">

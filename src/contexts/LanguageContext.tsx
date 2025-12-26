@@ -99,7 +99,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.address":
       "Jl. Salemba Tengah No.56, RT.4/RW.8, Paseban, Senen, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10440",
     "contact.email": "raslawfirm09@gmail.com",
-    "contact.phone": "+62 821 8889 9349",
+    "contact.phone": "6282188899349",
     "contact.form.name": "Nama Lengkap",
     "contact.form.email": "Email",
     "contact.form.phone": "Nomor Telepon",
@@ -197,7 +197,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.address":
       "Jl. Salemba Tengah No.56, RT.4/RW.8, Paseban, Senen, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10440",
     "contact.email": "raslawfirm09@gmail.com",
-    "contact.phone": "+62 821 8889 9349",
+    "contact.phone": "6282188899349",
     "contact.form.name": "Full Name",
     "contact.form.email": "Email",
     "contact.form.phone": "Phone Number",
@@ -217,7 +217,7 @@ const translations: Record<Language, Record<string, string>> = {
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>("id");
+  const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
     return translations[language][key] || key;
