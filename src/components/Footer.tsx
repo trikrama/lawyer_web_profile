@@ -26,12 +26,16 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-gold rounded flex items-center justify-center">
-                <span className="text-2xl font-bold text-charcoal">R</span>
+              <div className="w-12 h-10 bg-white rounded flex items-center justify-center">
+                <span className="text-2xl font-bold text-charcoal">
+                  <img src="/assets/images/logo.png" alt="logo" />
+                </span>
               </div>
               <div>
-                <h3 className="text-lg font-serif font-bold">RAS Law Firm</h3>
-                <p className="text-xs ">& Partners</p>
+                <h3 className="text-lg font-serif font-bold">
+                  Law Firm & Partners
+                </h3>
+                <p className="text-xs ">Rizaldy Alif Syahrial</p>
               </div>
             </div>
             <p className="text-sm /80 leading-relaxed">{t("footer.tagline")}</p>
@@ -115,6 +119,7 @@ const Footer = () => {
                 <a
                   href={`https://wa.me/${t("contact.phone")}`}
                   className="text-sm  hover:text-accent transition-colors"
+                  target="_blank"
                 >
                   +{t("contact.phone")}
                 </a>
