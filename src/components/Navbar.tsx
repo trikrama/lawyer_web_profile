@@ -43,14 +43,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-gold rounded flex items-center justify-center">
-              <span className="text-xl font-bold text-charcoal">R</span>
+            <div className="w-12 h-10 bg-white rounded flex items-center justify-center">
+              <span className="text-xl font-bold text-charcoal">
+                <img src="/assets/images/logo.png" alt="logo" />
+              </span>
             </div>
             <div className="hidden md:block">
               <h1 className="text-xl font-serif font-bold text-foreground group-hover:text-accent transition-colors">
-                RAS Law Firm
+                Law Firm & Partners
               </h1>
-              <p className="text-xs text-muted-foreground">& Partners</p>
+              <p className="text-xs text-muted-foreground">
+                Rizaldy Alif Syahrial
+              </p>
             </div>
           </NavLink>
 
