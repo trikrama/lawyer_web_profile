@@ -15,6 +15,7 @@ const Members = () => {
       description: 'Over 20 years of experience in corporate law and cross-border transactions. Led landmark M&A deals and advised Fortune 500 companies on complex regulatory matters.',
       email: 'raden.santoso@raslawfirm.co.id',
       linkedin: '#',
+      image: '/assets/images/rizaldi.jpeg',
     },
     {
       name: 'I Gede Yasa C.A',
@@ -23,6 +24,7 @@ const Members = () => {
       description: 'Renowned litigator with expertise in commercial disputes, arbitration, and white-collar crime. Successfully represented clients in high-profile cases before Indonesian courts.',
       email: 'maria.angelina@raslawfirm.co.id',
       linkedin: '#',
+      image: '/assets/images/igede.jpeg',
     },
     {
       name: 'Muhamad Ilmar R',
@@ -31,6 +33,7 @@ const Members = () => {
       description: 'Expert in labor law, employment contracts, and industrial relations disputes. Advised multinational corporations on workforce restructuring and compliance.',
       email: 'budi.hartono@raslawfirm.co.id',
       linkedin: '#',
+      image: '/assets/images/ilmar.jpeg',
     },
     {
       name: 'Dalili',
@@ -39,6 +42,7 @@ const Members = () => {
       description: 'Specializes in IP protection, licensing, and technology transactions. Extensive experience in trademark disputes and patent portfolio management.',
       email: 'siti.nurhaliza@raslawfirm.co.id',
       linkedin: '#',
+      image: '/assets/images/dalil.jpeg',
     }
   ];
 
@@ -69,17 +73,15 @@ const Members = () => {
                 className="hover-lift border-border bg-card overflow-hidden group"
               >
                 {/* Photo placeholder dengan gradient */}
-                <div className="aspect-square bg-gradient-dark relative overflow-hidden">
+                <div className="aspect-square bg-gradient-dark relative overflow-hidden group">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full bg-accent/20 flex items-center justify-center">
-                      <span className="text-5xl font-serif font-bold text-accent/60">
-                        {member.name.charAt(0)}
-                      </span>
-                    </div>
+                     <img
+                          src={member.image}
+                          alt={member.name}
+                          className="object-cover lg:grayscale group-hover:grayscale-0 transition-all duration-200"
+                        />
                   </div>
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-300" />
-                </div>
+               </div>
 
                 <CardHeader className="space-y-2">
                   <CardTitle className="text-xl font-serif text-foreground">

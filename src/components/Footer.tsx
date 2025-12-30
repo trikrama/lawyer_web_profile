@@ -113,10 +113,10 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
                 <a
-                  href="tel:+622100000000"
+                  href={`https://wa.me/${t("contact.phone")}`}
                   className="text-sm  hover:text-accent transition-colors"
                 >
-                  {t("contact.phone")}
+                  +{t("contact.phone")}
                 </a>
               </li>
             </ul>

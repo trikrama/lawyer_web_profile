@@ -12,6 +12,7 @@ import {
   Globe,
   Shield
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -248,12 +249,12 @@ const Services = () => {
             Our team is ready to provide tailored legal solutions for your specific needs. 
             Contact us today for a confidential consultation.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-block px-8 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg transition-colors"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </section>
     </div>

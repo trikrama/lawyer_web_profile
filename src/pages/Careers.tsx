@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Award
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Careers = () => {
   const { t } = useLanguage();
@@ -132,7 +133,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-20 bg-secondary/30">
+      {/* <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -186,10 +187,10 @@ const Careers = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Culture Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl font-serif font-bold text-foreground">
@@ -250,7 +251,7 @@ const Careers = () => {
             variant="secondary"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
           >
-            Submit Your CV
+            <Link to="/contact">Submit Your CV</Link>
           </Button>
         </div>
       </section>
