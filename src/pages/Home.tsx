@@ -71,7 +71,7 @@ const Home = () => {
   console.log(t("hero.title"));
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section: Full-screen dengan gradient background */}
 
       {/* <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark overflow-hidden"> */}

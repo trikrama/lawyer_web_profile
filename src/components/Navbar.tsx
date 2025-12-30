@@ -75,7 +75,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setLanguage(language === "id" ? "en" : "id")}
+              onClick={() => setLanguage(language === "en" ? "id" : "en")}
               className="hidden md:flex items-center space-x-2"
             >
               <Globe className="w-4 h-4" />

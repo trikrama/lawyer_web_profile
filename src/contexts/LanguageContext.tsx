@@ -1,7 +1,7 @@
 // Language Context: Multi-language support (ID/EN) untuk seluruh aplikasi
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-export type Language = "id" | "en";
+export type Language = "en" | "id";
 
 interface LanguageContextType {
   language: Language;
@@ -217,7 +217,7 @@ const translations: Record<Language, Record<string, string>> = {
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>("id");
+  const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
     return translations[language][key] || key;
