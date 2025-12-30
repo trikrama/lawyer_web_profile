@@ -1,7 +1,7 @@
 // Language Context: Multi-language support (ID/EN) untuk seluruh aplikasi
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-export type Language = "id" | "en";
+export type Language = "en" | "id";
 
 interface LanguageContextType {
   language: Language;

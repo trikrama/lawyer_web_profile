@@ -71,7 +71,7 @@ const Home = () => {
   console.log(t("hero.title"));
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section: Full-screen dengan gradient background */}
 
       {/* <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark overflow-hidden"> */}
@@ -110,7 +110,7 @@ const Home = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 shadow-gold"
+                className="bg-accent hover:bg-white/90 text-accent-foreground font-semibold px-8 shadow-gold"
               >
                 <Link to="/contact">{t("hero.cta.primary")}</Link>
               </Button>
